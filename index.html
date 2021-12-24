@@ -68,7 +68,7 @@
 
         h1 = document.getElementById('h1');
 
-        document.op = document.op + 0.01 * document.opDirection;
+        document.op = document.op + 0.02 * document.opDirection;
         h1.style.opacity = document.op;
 
         if (document.op <=0 || document.op >= 1) nextStep();
