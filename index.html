@@ -43,12 +43,15 @@
     
     let index = 0;
 
+    
+
     function initialize()
     {
-      clearInterval(interval);
+      //clearInterval(interval);
       document.getElementById("myCanvas").style.display = 'none';
       setInterval(show,20);
     }
+    initialize();
 
     function nextTextFrame()
     {
@@ -237,6 +240,6 @@
   
   }
   
-  interval = setInterval(loop,70);
-  init();
+  //interval = setInterval(loop,70);
+  //init();
   </script>
