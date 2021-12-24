@@ -8,8 +8,6 @@
 
         <style>
             span {
-                height: 90%;
-                line-height: 90%;
                 text-align: center;
                 opacity: 0;
                 font-family:'Caveat';
@@ -23,9 +21,9 @@
                 background:#ecf0f1;
             }
             canvas {
-                padding-top: 20vh;
+                padding-top: 45vh;
                 width: 30%;
-                display: inline-block;
+                display: block;
                 margin:auto;
                 background:#ecf0f1;
                 opacity: 0;
@@ -34,7 +32,7 @@
     </head>
 
     <body>
-        <canvas id="myCanvas"></canvas>
+        <canvas id="myCanvas"></canvas><br>
         <span id='span'>Привет</span>
     </body>
 </html>
@@ -49,11 +47,11 @@
 
     function initialize()
     {
-      //clearInterval(interval);
+      clearInterval(interval);
       document.getElementById("myCanvas").style.display = 'none';
       setInterval(show,20);
     }
-    initialize();
+    //initialize();
 
     function nextTextFrame()
     {
@@ -242,6 +240,6 @@
   
   }
   
-  //interval = setInterval(loop,70);
-  //init();
+  interval = setInterval(loop,70);
+  init();
   </script>
