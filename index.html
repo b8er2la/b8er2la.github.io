@@ -7,7 +7,7 @@
         <title>Боженя</title>
 
         <style>
-            h1 {
+            span {
                 height: 90%;
                 line-height: 90%;
                 text-align: center;
@@ -35,12 +35,12 @@
 
     <body>
         <canvas id="myCanvas"></canvas>
-        <h1 id='h1'>Привет</h1>
+        <span id='span'>Привет</span>
     </body>
 </html>
 
 <script>
-    let h1 = document.getElementsByTagName('h1')[0];
+    let span = document.getElementsByTagName('span')[0];
     let a = ['Боженя','С днем рождения, милая', 'Такая ты училка', 'Хорошая девочка','Будь счастлива','Не парься по мелочам','Я тебя знаю как будто 1000 лет, а тебе только 24','Прости за все обидки','Ты сладкий пирожок','И Сашу тоже поздравляю','Чмок'];
     
     let index = 0;
@@ -58,7 +58,7 @@
     function nextTextFrame()
     {
         if (index >= a.length) index = a.length-1;
-        h1.innerText = a[index++];
+        span.innerText = a[index++];
     }
     
     document.op = 0;
@@ -73,10 +73,10 @@
             return;
         }
 
-        h1 = document.getElementById('h1');
+        span = document.getElementById('span');
 
         document.op = document.op + 0.04 * document.opDirection;
-        h1.style.opacity = document.op;
+        span.style.opacity = document.op;
 
         if (document.op <=0 || document.op >= 1) nextStep();
     }
