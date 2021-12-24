@@ -20,9 +20,16 @@
             body {
                 background:#ecf0f1;
             }
+
+            @media screen and (orientation: landscape) {
+              canvas{width: 30vw;}
+            }
+            @media screen and (orientation: portrait) {
+              canvas{width: 80vw;}
+            }
             canvas {
                 padding-top: 45vh;
-                width: 95wv;
+                
                 display: block;
                 margin:auto;
                 background:#ecf0f1;
