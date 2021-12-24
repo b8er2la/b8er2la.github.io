@@ -15,6 +15,7 @@
                 opacity: 0;
                 font-family:'Caveat';
                 font-size: 9vh;
+                padding: 0px;
             }
             body {
                 background:#ecf0f1;
@@ -45,7 +46,7 @@
     function initialize()
     {
       document.getElementById("myCanvas").style.display = 'none';
-      setInterval(show,10);
+      setInterval(show,20);
     }
 
     function nextTextFrame()
@@ -68,7 +69,7 @@
 
         h1 = document.getElementById('h1');
 
-        document.op = document.op + 0.02 * document.opDirection;
+        document.op = document.op + 0.04 * document.opDirection;
         h1.style.opacity = document.op;
 
         if (document.op <=0 || document.op >= 1) nextStep();
@@ -106,7 +107,7 @@
     if (logoOpacity > 1) 
     {
       logoDirection = -1;
-      dropStages = 40;
+      dropStages = 20;
     }
     if (logoOpacity < 0)
     {
