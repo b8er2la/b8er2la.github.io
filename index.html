@@ -45,7 +45,7 @@
     function initialize()
     {
       document.getElementById("myCanvas").style.display = 'none';
-      setInterval(show,60);
+      setInterval(show,10);
     }
 
     function nextTextFrame()
@@ -68,7 +68,7 @@
 
         h1 = document.getElementById('h1');
 
-        document.op = document.op + 0.05 * document.opDirection;
+        document.op = document.op + 0.01 * document.opDirection;
         h1.style.opacity = document.op;
 
         if (document.op <=0 || document.op >= 1) nextStep();
@@ -78,7 +78,7 @@
     {
         if (document.op >= 1) 
         {
-            dropStages = 15;
+            dropStages = 40;
             document.opDirection = -1;
         }
         if (document.op <= 0) 
@@ -91,7 +91,7 @@
 </script>
 
 <script>
-  let intervalID = setInterval(logo,70);
+  let intervalID = setInterval(logo,10);
   logoDirection = 1;
   logoOpacity = 0;
   dropStages = 0;
@@ -106,7 +106,7 @@
     if (logoOpacity > 1) 
     {
       logoDirection = -1;
-      dropStages = 20;
+      dropStages = 40;
     }
     if (logoOpacity < 0)
     {
@@ -114,7 +114,7 @@
       initialize();
     }
   
-    logoOpacity= logoOpacity + logoDirection * 0.05;
+    logoOpacity= logoOpacity + logoDirection * 0.01;
     document.getElementById('myCanvas').style.opacity = logoOpacity;
   }
   
