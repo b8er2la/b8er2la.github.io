@@ -22,7 +22,7 @@
             }
             canvas {
                 padding-top: 45vh;
-                width: 30%;
+                width: 95wv;
                 display: block;
                 margin:auto;
                 background:#ecf0f1;
@@ -33,13 +33,13 @@
 
     <body>
         <canvas id="myCanvas"></canvas><br>
-        <span id='span'>Привет</span>
+        <span id='span'>Привет, Боженя</span>
     </body>
 </html>
 
 <script>
     let span = document.getElementsByTagName('span')[0];
-    let a = ['Боженя','С днем рождения, милая', 'Такая ты училка', 'Хорошая девочка','Будь счастлива','Не парься по мелочам','Я тебя знаю как будто 1000 лет, а тебе только 24','Прости за все обидки','Ты сладкий пирожок','И Сашу тоже поздравляю','Чмок'];
+    let a = ['Чмок','С днем рождения, милая', 'Такая ты училка', 'Хорошая девочка','Будь счастлива','Не парься по мелочам','Я тебя знаю как будто 1000 лет, а тебе только 24','Прости за все обидки','Ты сладкий пирожок','И Сашу тоже поздравляю','Чмок'];
     
     let index = 0;
 
@@ -73,7 +73,7 @@
 
         span = document.getElementById('span');
 
-        document.op = document.op + 0.04 * document.opDirection;
+        document.op = document.op + 0.03 * document.opDirection;
         span.style.opacity = document.op;
 
         if (document.op <=0 || document.op >= 1) nextStep();
@@ -83,7 +83,7 @@
     {
         if (document.op >= 1) 
         {
-            dropStages = 40;
+            dropStages = 80;
             document.opDirection = -1;
         }
         if (document.op <= 0) 
@@ -111,7 +111,7 @@
     if (logoOpacity > 1) 
     {
       logoDirection = -1;
-      dropStages = 50;
+      dropStages = 500;
     }
     if (logoOpacity < 0)
     {
